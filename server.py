@@ -5,12 +5,13 @@ import pathlib
 
 temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
-
 learner = load_learner('64pctmodel.pkl')
+pathlib.PosixPath = temp
+
 result = learner.predict('./teste.jpg')
 app = Flask(__name__)
 
-# Deafult API route
+# Default API route
 @app.route("/")
 def homepage():
     return result[0]
