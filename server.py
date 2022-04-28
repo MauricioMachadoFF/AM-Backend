@@ -5,10 +5,7 @@ from fastai.vision.all import load_learner
 import os
 import pathlib
 
-# temp = pathlib.PosixPath
-# pathlib.PosixPath = pathlib.WindowsPath
 learner = load_learner('64pctmodel.pkl')
-# pathlib.PosixPath = temp
 
 app = Flask(__name__)
 
