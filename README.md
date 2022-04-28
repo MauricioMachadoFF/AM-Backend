@@ -18,6 +18,12 @@ Para utilizar o projeto em mac e linux acesse a branch:
 
 ## API e servidor
 A API é toda feita na biblioteca Flask, na porta 9874 e as requisições são feitas na rota `/` (apenas POST).
+#### Exemplo de resposta
+``` json 
+{
+  "result": "HAPPY"
+}
+```
 
 # Notebook.ipynb
 Este notebook é uma implementações da arquitetura encontrada no artigo [DeXpression: Deep Convolutional Neural Network for Expression Recognition](https://paperswithcode.com/paper/dexpression-deep-convolutional-neural-network), juntamente com o dataset da [fer13](https://www.kaggle.com/datasets/gauravsharma99/fer13-cleaned-dataset). A atual acuracia do modelo gerado a partir deste notebook é de 64.8%, utilizando somente 5 categorias de emoções, das 11 iniciais propostas pelo artigo em questão. Acreditamos que a falta de acuracia do modelo é devido ao tamanho improprio das imagens do dataset que foi utilizado no treinamento, juntamente com a quantidade de classes. 
