@@ -25,7 +25,7 @@ def homepage():
 
     result = learner.predict(filename)
     os.remove(filename)
-    return jsonify({'result': result[0]})
+    return jsonify({'result': result[0].upper()})
 
 if __name__ == "__main__":
     app.run(host='localhost', port=9874, debug=True)
